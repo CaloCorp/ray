@@ -13,13 +13,14 @@ const Ray = function () {
      this.length--
       return popped 
     },
-    unshift: function(){
-    
+    unshift: function(value){
+    this.value = value
+    this[0]=value
       this.length++
     },
     shift: function (){
-      const shifted= this[0]
-      
+      const shifted = this[0]
+      this.length--;
       
       return shifted
     }
